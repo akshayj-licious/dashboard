@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Joinee Softwares for macOS</title>
+    <link rel="icon" type="image/png" href="https://www.svgrepo.com/show/495142/cd.svg"> <!-- Example macOS favicon -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f4f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #6e6e6e;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #d1d1d6;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .software-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .software-item {
+            position: relative;
+            background-color: #ffffff;
+            border: 1px solid #d1d1d6;
+            padding: 15px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            width: calc(25% - 10px); /* 4 items per row */
+        }
+
+        .software-item img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .software-item h2 {
+            font-size: 16px;
+            color: #1d1d1f;
+            margin: 0 0 10px 0;
+        }
+
+        .download-button {
+            background-color: #007aff;
+            color: #fff;
+            padding: 12px 24px;
+            border: 1px solid #007aff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .download-button:hover {
+            background-color: #0051a8;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .button-box {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f0f0f5;
+            padding: 5px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .edit-button, .delete-button {
+            background-color: transparent;
+            border: none; /* Removed border */
+            padding: 4px 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 12px;
+            color: #007aff;
+            outline: none;
+            text-transform: uppercase;
+            flex: 1;
+            text-align: center;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .edit-button {
+            color: #6e6e6e;
+        }
+
+        .delete-button {
+            color: #ff3b30;
+        }
+
+        .edit-button:hover {
+            background-color: #e1e1e6;
+        }
+
+        .delete-button:hover {
+            background-color: #f7d7d7;
+        }
+
+        .add-software-form {
+            text-align: center;
+            margin: 20px 0;
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #d1d1d6;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .form-group input {
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #d1d1d6;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            background-color: #f0f0f5;
+            border-radius: 8px;
+        }
+
+        #addSoftwareButton {
+            background-color: #007aff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        #addSoftwareButton:hover {
+            background-color: #0051a8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Licious IT Team</h1>
+    <div class="subtitle">New Joinee - macOS Software</div>
+    <div class="card">
+        <div class="software-list" id="softwareList">
+            <!-- Software items will be dynamically inserted here -->
+        </div>
+        <div class="add-software-form">
+            <h2>Add Software</h2>
+            <div class="form-group">
+                <input type="text" id="softwareName" placeholder="Software Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="downloadLink" placeholder="Download Link" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="logoLink" placeholder="Logo Link (optional)">
+            </div>
+            <button id="addSoftwareButton">Add Software</button>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyA3smA3lUzD8dJBZIB534yPHW8TIjZSASY",
+            authDomain: "macossoftwares-950ac.firebaseapp.com",
+            projectId: "macossoftwares-950ac",
+            storageBucket: "macossoftwares-950ac.appspot.com",
+            messagingSenderId: "122767072620",
+            appId: "1:122767072620:web:75921be7db12822a102749",
+            measurementId: "G-C9SPBTL857"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        async function fetchSoftware() {
+            try {
+                const softwareList = document.getElementById('softwareList');
+                softwareList.innerHTML = '';
+
+                const querySnapshot = await getDocs(collection(db, "software"));
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    const softwareItem = document.createElement('div');
+                    softwareItem.classList.add('software-item');
+                    softwareItem.innerHTML = `
+                        <img src="${data.logoLink || 'https://via.placeholder.com/60'}" alt="${data.name}">
+                        <h2>${data.name}</h2>
+                        <a href="${data.downloadLink}" class="download-button" target="_blank">Download</a>
+                        <div class="button-container">
+                            <div class="button-box">
+                                <button class="edit-button" data-id="${doc.id}" data-name="${data.name}" data-download="${data.downloadLink}" data-logo="${data.logoLink}">Edit</button>
+                                <button class="delete-button" data-id="${doc.id}">Delete</button>
+                            </div>
+                        </div>
+                    `;
+                    softwareList.appendChild(softwareItem);
+                });
+
+                document.querySelectorAll('.edit-button').forEach(button => {
+                    button.addEventListener('click', (event) => {
+                        const id = event.target.dataset.id;
+                        const name = event.target.dataset.name;
+                        const downloadLink = event.target.dataset.download;
+                        const logoLink = event.target.dataset.logo;
+                        editSoftware(id, name, downloadLink, logoLink);
+                    });
+                });
+
+                document.querySelectorAll('.delete-button').forEach(button => {
+                    button.addEventListener('click', (event) => {
+                        const id = event.target.dataset.id;
+                        deleteSoftware(id);
+                    });
+                });
+
+            } catch (error) {
+                console.error("Error fetching software:", error);
+            }
+        }
+
+        async function addSoftware() {
+            const name = document.getElementById('softwareName').value;
+            const downloadLink = document.getElementById('downloadLink').value;
+            const logoLink = document.getElementById('logoLink').value;
+
+            try {
+                await addDoc(collection(db, "software"), {
+                    name,
+                    downloadLink,
+                    logoLink
+                });
+                document.getElementById('softwareName').value = '';
+                document.getElementById('downloadLink').value = '';
+                document.getElementById('logoLink').value = '';
+                fetchSoftware();
+            } catch (error) {
+                console.error("Error adding software:", error);
+            }
+        }
+
+        async function deleteSoftware(id) {
+            try {
+                await deleteDoc(doc(db, "software", id));
+                fetchSoftware();
+            } catch (error) {
+                console.error("Error deleting software:", error);
+            }
+        }
+
+        async function editSoftware(id, name, downloadLink, logoLink) {
+            const newName = prompt("Enter new name:", name);
+            const newDownloadLink = prompt("Enter new download link:", downloadLink);
+            const newLogoLink = prompt("Enter new logo link:", logoLink);
+
+            if (newName && newDownloadLink) {
+                try {
+                    await updateDoc(doc(db, "software", id), {
+                        name: newName,
+                        downloadLink: newDownloadLink,
+                        logoLink: newLogoLink
+                    });
+                    fetchSoftware();
+                } catch (error) {
+                    console.error("Error updating software:", error);
+                }
+            }
+        }
+
+        document.getElementById('addSoftwareButton').addEventListener('click', addSoftware);
+
+        fetchSoftware();
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Licious IT Dashboard</title>
+<meta name="generator" content="WYSIWYG Web Builder 19 - https://www.wysiwygwebbuilder.com">
+<link href="icons8-settings.svg" rel="icon" type="image/svg+xml">
+<link href="icons8-settings.svg" rel="icon" type="image/svg+xml">
+<link href="icons8-settings.svg" rel="icon" type="image/svg+xml">
+<link href="Licious_IT.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-3.7.1.min.js"></script>
+<link rel="stylesheet" href="magnificpopup/magnific-popup.css">
+<script src="magnificpopup/jquery.magnific-popup.min.js"></script>
+<script>
+function displaylightbox(url, options)
+{
+   options.items = { src: url };
+   options.type = 'iframe';
+   $.magnificPopup.open(options);
+}
+</script>
+<script>
+        // Save the note content to localStorage
+        function saveNote() {
+            var note = document.getElementById('noteArea').value;
+            localStorage.setItem('savedNote', note);
+        }
+
+        // Download the note content as a .txt file
+        function downloadNote() {
+            var note = document.getElementById('noteArea').value;
+            var blob = new Blob([note], { type: 'text/plain' });
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'note.txt';
+            link.click();
+        }
+
+        // Load the saved note from localStorage on page load
+        window.onload = function() {
+            var savedNote = localStorage.getItem('savedNote');
+            if (savedNote) {
+                document.getElementById('noteArea').value = savedNote;
+            }
+        };
+    </script>
+</head>
+<body>
+<div id="container">
+</div>
+<div id="Layer3" style="position:absolute;text-align:center;left:0px;top:80px;width:100%;height:1159px;z-index:48;">
+<div id="Layer3_Container" style="width:994px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Shape1" style="position:absolute;left:47px;top:735px;width:900px;height:400px;z-index:0;">
+<img src="images/img0001.png" id="Shape1" alt="" width="900" height="400" style="width:900px;height:400px;"></div>
+<div id="wb_Shape2" style="position:absolute;left:47px;top:88px;width:900px;height:200px;z-index:1;">
+<img src="images/img0002.png" id="Shape2" alt="" width="900" height="200" style="width:900px;height:200px;"></div>
+<div id="wb_Shape4" style="position:absolute;left:47px;top:311px;width:900px;height:400px;z-index:2;">
+<img src="images/img0007.png" id="Shape4" alt="" width="900" height="400" style="width:900px;height:400px;"></div>
+<div id="wb_Shape6" style="position:absolute;left:359px;top:486px;width:60px;height:60px;z-index:3;">
+<img src="images/img0003.png" id="Shape6" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape3" style="position:absolute;left:289px;top:486px;width:60px;height:60px;z-index:4;">
+<img src="images/img0004.png" id="Shape3" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape7" style="position:absolute;left:430px;top:486px;width:60px;height:60px;z-index:5;">
+<img src="images/img0005.png" id="Shape7" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape5" style="position:absolute;left:503px;top:486px;width:60px;height:60px;z-index:6;">
+<img src="images/img0006.png" id="Shape5" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape11" style="position:absolute;left:574px;top:486px;width:60px;height:60px;z-index:7;">
+<img src="images/img0008.png" id="Shape11" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape9" style="position:absolute;left:646px;top:486px;width:60px;height:60px;z-index:8;">
+<img src="images/img0010.png" id="Shape9" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Image1" style="position:absolute;left:300px;top:497px;width:38px;height:38px;z-index:9;">
+<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank" title="Open Gmail"><img src="images/icons8-gmail-48.png" id="Image1" alt="" width="38" height="38"></a></div>
+<div id="wb_Image6" style="position:absolute;left:372px;top:499px;width:34px;height:34px;z-index:10;">
+<a href="https://mail.google.com/chat/u/0/#chat/home" target="_blank" title="Open Google Chat"><img src="images/icons8-google-chat-48.png" id="Image6" alt="" width="34" height="34"></a></div>
+<div id="wb_Image5" style="position:absolute;left:514px;top:497px;width:38px;height:38px;z-index:11;">
+<a href="https://calendar.google.com/calendar" target="_blank" title="Open Calendar"><img src="images/icons8-google-calendar-48.png" id="Image5" alt="" width="38" height="38"></a></div>
+<div id="wb_Image2" style="position:absolute;left:441px;top:497px;width:38px;height:38px;z-index:12;">
+<a href="https://drive.google.com/drive/home" target="_blank" title="Open Drive"><img src="images/icons8-google-drive-48.png" id="Image2" alt="" width="38" height="38"></a></div>
+<div id="wb_Image3" style="position:absolute;left:585px;top:497px;width:38px;height:38px;z-index:13;">
+<a href="https://docs.google.com/spreadsheets" target="_blank" title="Open Spreadsheets"><img src="images/icons8-google-sheets-48.png" id="Image3" alt="" width="38" height="38"></a></div>
+<div id="wb_Image4" style="position:absolute;left:657px;top:497px;width:38px;height:38px;z-index:14;">
+<a href="https://docs.google.com/document" target="_blank" title="Open Documents"><img src="images/icons8-google-docs-48.png" id="Image4" alt="" width="38" height="38"></a></div>
+<div id="wb_Shape8" style="position:absolute;left:360px;top:361px;width:60px;height:60px;z-index:15;">
+<img src="images/img0009.png" id="Shape8" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape10" style="position:absolute;left:431px;top:361px;width:60px;height:60px;z-index:16;">
+<img src="images/img0011.png" id="Shape10" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape12" style="position:absolute;left:504px;top:361px;width:60px;height:60px;z-index:17;">
+<img src="images/img0012.png" id="Shape12" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Image7" style="position:absolute;left:371px;top:370px;width:38px;height:38px;z-index:18;">
+<a href="https://itsupport.licious.com/app/itdesk/HomePage.do" target="_blank"><img src="images/icons8-dashboard-48.png" id="Image7" alt="" title="ITSM Dashboard" width="38" height="38"></a></div>
+<div id="wb_Image8" style="position:absolute;left:442px;top:370px;width:38px;height:38px;z-index:19;">
+<a href="https://itsupport.licious.com/app/itdesk/ui/requests" target="_blank" title="View Requests"><img src="images/icons8-search-48.png" id="Image8" alt="" width="38" height="38"></a></div>
+<div id="wb_Shape13" style="position:absolute;left:575px;top:361px;width:60px;height:60px;z-index:20;">
+<img src="images/img0013.png" id="Shape13" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Image9" style="position:absolute;left:587px;top:374px;width:34px;height:34px;z-index:21;">
+<a href="https://itsupport.licious.com/app/itdesk/ui/activities" target="_blank" title="Create Task"><img src="images/icons8-task-48.png" id="Image9" alt="" width="34" height="34"></a></div>
+<div id="wb_Image10" style="position:absolute;left:516px;top:371px;width:36px;height:36px;z-index:22;">
+<a href="https://itsupport.licious.com/app/itdesk/ui/requests/add" target="_blank" title="Add Service/Incident Request"><img src="images/icons8-request-service-48.png" id="Image10" alt="" width="36" height="36"></a></div>
+<div id="wb_Shape14" style="position:absolute;left:430px;top:612px;width:60px;height:60px;z-index:23;">
+<img src="images/img0014.png" id="Shape14" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape15" style="position:absolute;left:359px;top:612px;width:60px;height:60px;z-index:24;">
+<img src="images/img0015.png" id="Shape15" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape16" style="position:absolute;left:503px;top:611px;width:60px;height:60px;z-index:25;">
+<img src="images/img0016.png" id="Shape16" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape17" style="position:absolute;left:574px;top:611px;width:60px;height:60px;z-index:26;">
+<img src="images/img0017.png" id="Shape17" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape18" style="position:absolute;left:646px;top:612px;width:60px;height:60px;z-index:27;">
+<img src="images/img0018.png" id="Shape18" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Shape19" style="position:absolute;left:289px;top:612px;width:60px;height:60px;z-index:28;">
+<img src="images/img0019.png" id="Shape19" alt="" width="60" height="60" style="width:60px;height:60px;"></div>
+<div id="wb_Image11" style="position:absolute;left:513px;top:621px;width:40px;height:40px;z-index:29;">
+<a href="https://login.microsoftonline.com/" target="_blank" title="Open MS Office 365 Dashbaord"><img src="images/icons8-microsoft-365-48.png" id="Image11" alt="" width="40" height="40"></a></div>
+<div id="wb_Image12" style="position:absolute;left:443px;top:625px;width:34px;height:34px;z-index:30;">
+<a href="https://vpn.licious.app/login" target="_blank" title="Open VPN"><img src="images/icons8-vpn-48.png" id="Image12" alt="" width="34" height="34"></a></div>
+<div id="wb_Image13" style="position:absolute;left:589px;top:626px;width:31px;height:31px;z-index:31;">
+<a href="https://admin.atlassian.com/o/b9f29a98-2fc0-4935-ba19-344c0d9184e5/users?status=ACTIVE" target="_blank" title="Open Atlassian Admin Panel"><img src="images/atlassian.png" id="Image13" alt="" width="31" height="31"></a></div>
+<div id="wb_Image14" style="position:absolute;left:373px;top:625px;width:34px;height:34px;z-index:32;">
+<a href="https://endpointcentral.manageengine.in/webclient#/uems/tools/remote-control/computers" target="_blank" title="Open Manage Engine"><img src="images/icons8-remote-desktop-48.png" id="Image14" alt="" width="34" height="34"></a></div>
+<div id="wb_Image15" style="position:absolute;left:302px;top:625px;width:35px;height:35px;z-index:33;">
+<a href="https://admin.google.com/ac/users" target="_blank" title="View Users"><img src="images/icons8-google-48.png" id="Image15" alt="" width="35" height="35"></a></div>
+<div id="wb_Image16" style="position:absolute;left:660px;top:626px;width:32px;height:32px;z-index:34;">
+<a href="#" target="_blank" title="Create New Joinee Account"><img src="images/icons8-add-user-group-woman-man-48.png" id="Image16" alt="" width="32" height="32"></a></div>
+<div id="Html1" style="position:absolute;left:222px;top:163px;width:550px;height:50px;z-index:35">
+<form action="https://www.google.com/search" method="get" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; padding: 10px; box-sizing: border-box;">
+    <input type="text" name="q" placeholder="Search Google" style="flex: 1; height: 40px; padding: 0 20px; border: 1px solid #ddd; border-radius: 24px; font-size: 16px; outline: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); transition: box-shadow 0.3s ease; box-sizing: border-box;">
+    <input type="submit" value="Search" style="display: none;">
+</form>
+</div>
+<textarea name="noteArea" id="noteArea" oninput="saveNote();return false;" style="position:absolute;left:172px;top:805px;width:618px;height:238px;z-index:36;" rows="12" cols="60" spellcheck="false" placeholder="Type your note here....."></textarea>
+<div id="Html2" style="position:absolute;left:325px;top:115px;width:344px;height:25px;z-index:37">
+<div id="dateTime" style="color: black; width: 100%; height: 100%; text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center; overflow: hidden;"></div>
+
+<script>
+    function updateDateTime() {
+        var now = new Date();
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var day = days[now.getDay()];
+        var date = now.getDate();
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var month = months[now.getMonth()];
+        var time = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}); // Hour and minute only
+        
+        var dateTimeString = day + ', ' + date + ' ' + month + ' ' + time;
+        document.getElementById('dateTime').innerHTML = dateTimeString;
+    }
+
+    setInterval(updateDateTime, 1000); // Update every second
+    updateDateTime(); // Initialize immediately
+</script>
+</div>
+<div id="Html3" style="position:absolute;left:347px;top:572px;width:300px;height:20px;z-index:38">
+<div style="color: black; font-size: 18px; width: 100%; height: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
+    For Acess Giving
+</div>
+</div>
+<div id="Html5" style="position:absolute;left:347px;top:447px;width:300px;height:20px;z-index:39">
+<div style="color: black; font-size: 18px; width: 100%; height: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
+    Google Apps
+</div>
+</div>
+<div id="Html6" style="position:absolute;left:347px;top:327px;width:300px;height:20px;z-index:40">
+<div style="color: black; font-size: 18px; width: 100%; height: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
+    ITSM
+</div>
+</div>
+<div id="Html4" style="position:absolute;left:397px;top:760px;width:200px;height:20px;z-index:41">
+<div style="color: black; font-size: 18px; width: 100%; height: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
+    Notes
+</div>
+</div>
+<div id="Html8" style="position:absolute;left:372px;top:235px;width:250px;height:30px;z-index:42">
+<div style="color: black; font-size: 18px; width: 100%; height: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
+    Today's Meetings
+</div>
+</div>
+<div id="wb_Shape20" style="position:absolute;left:372px;top:235px;width:250px;height:30px;z-index:43;">
+<a href="javascript:displaylightbox('https://akshayj-licious.github.io/dashboard/meetings',{})" target="_self"><img src="images/img0020.png" id="Shape20" alt="" width="250" height="30" style="width:250px;height:30px;"></a></div>
+<div id="wb_CssMenu1" style="position:absolute;left:47px;top:23px;width:898px;height:40px;z-index:44;">
+<ul id="CssMenu1" role="menubar" class="nav">
+<li role="menuitem" class="nav-item firstmain"><a class="nav-link" href="https://admin.google.com/ac/users" target="_blank">Google&nbsp;Admin&nbsp;Console</a>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link withsubmenu" href="javascript:void(0)" target="_self">New&nbsp;Joinee</a>
+
+<ul role="menu">
+<li role="menuitem" class="nav-item firstitem"><a class="nav-link withsubmenu" href="javascript:displaylightbox('https://akshayj-licious.github.io/dashboard/windows.html',{})" target="_self">Windows</a>
+
+<ul role="menu">
+<li role="menuitem" class="nav-item firstitem lastitem"><a class="nav-link" href="javascript:displaylightbox('https://akshayj-licious.github.io/dashboard/windowsusercreation.html',{})" target="_self">User&nbsp;Creation</a>
+</li>
+</ul>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link" href="javascript:displaylightbox('https://akshayj-licious.github.io/dashboard/macOS.html',{})" target="_self">macOS</a>
+</li>
+<li role="menuitem" class="nav-item lastitem"><a class="nav-link" href="#" target="_self">User&nbsp;Creation</a>
+</li>
+</ul>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/13Q5JlTWM2cfuOhId3MF5IT9px6LPuTIgbP-WYtfJNKw/edit?usp=sharing" target="_blank">Templates</a>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link withsubmenu" href="#" target="_self">File&nbsp;Sharing</a>
+
+<ul role="menu">
+<li role="menuitem" class="nav-item firstitem"><a class="nav-link" href="https://drive.google.com/drive/folders/19vkA2kBgb7u-VfYPdUrmBjtATNUOo73e?usp=sharing" target="_blank" title="For viewing and downloading shared folder files">Download</a>
+</li>
+<li role="menuitem" class="nav-item lastitem"><a class="nav-link" href="https://script.google.com/macros/s/AKfycbxB8KE4X7-jD7iZNbf5YE3dtt2kyFEiY8ya2h4oLeXH6Rr8zuWVVe-BFFMQEKqfGCk6/exec" target="_blank" title="For uploading file to the shared folder">Upload</a>
+</li>
+</ul>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link withsubmenu" href="javascript:void(0)" target="_self">Repair&nbsp;Request</a>
+
+<ul role="menu">
+<li role="menuitem" class="nav-item firstitem"><a class="nav-link withsubmenu" href="javascript:void(0)" target="_self">Lenovo</a>
+
+<ul role="menu">
+<li role="menuitem" class="nav-item firstitem"><a class="nav-link" href="https://pcsupport.lenovo.com/in/en/warranty-lookup#/" target="_blank">Warranty&nbsp;Check</a>
+</li>
+<li role="menuitem" class="nav-item lastitem"><a class="nav-link" href="javascript:displaylightbox('https://docs.google.com/spreadsheets/d/1M1MNpufxi03vY5vvZBeRbxemp0RMPtMNKcj-k2kRmCg/edit?usp=sharing',{})" target="_self">Repair&nbsp;Request</a>
+</li>
+</ul>
+</li>
+<li role="menuitem" class="nav-item lastitem"><a class="nav-link withsubmenu" href="javascript:void(0)" target="_self">Apple</a>
+
+<ul role="menu">
+<li role="menuitem" class="nav-item firstitem"><a class="nav-link" href="https://checkcoverage.apple.com/?locale=en_IN" target="_blank">Warranty&nbsp;Check</a>
+</li>
+<li role="menuitem" class="nav-item lastitem"><a class="nav-link" href="javascript:displaylightbox('https://docs.google.com/spreadsheets/d/1yHKuknscPSQX9oqWecHtd0K0--9BN_XpH7ErCu3Zk78/edit?usp=sharing',{})" target="_self">Repair&nbsp;Request</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link withsubmenu" href="javascript:void(0)" target="_self">Printers</a>
+
+<ul role="menu">
+<li role="menuitem" class="nav-item firstitem lastitem"><a class="nav-link" href="https://docs.google.com/document/d/1U-IhN-ylstt-uYY11mCek8kWD9LDo0vz8ayfhywcdaI/edit?usp=sharing" target="_blank">Drivers</a>
+</li>
+</ul>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1ZpF_8Kaa1Pf-4pOobmV2yCApM59_82HtzD_oRw6ae1s/edit?usp=sharing" target="_blank">SOP</a>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link withsubmenu" href="javascript:void(0)" target="_self">Other</a>
+
+<ul role="menu">
+<li role="menuitem" class="nav-item firstitem"><a class="nav-link" href="https://chatgpt.com/" target="_blank">ChatGPT</a>
+</li>
+<li role="menuitem" class="nav-item lastitem"><a class="nav-link" href="https://licious.darwinbox.in/user/login" target="_blank">Darwinbox</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="Layer4" style="position:absolute;text-align:center;left:0px;top:0px;width:100%;height:80px;z-index:49;">
+<div id="Layer4_Container" style="width:994px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="Html7" style="position:absolute;left:47px;top:18px;width:288px;height:45px;z-index:45">
+<div style="color: white; font-size: 34px; width: 100%; height: 100%; text-align: left; display: flex; justify-content: left; align-items: center;">
+    DASHBOARD
+</div>
+</div>
+<div id="wb_Image17" style="position:absolute;left:911px;top:22px;width:36px;height:36px;z-index:46;">
+<a href="https://akshayj-licious.github.io/dashboard/clipboard.html" target="_blank"><img src="images/icons8-clipboard-100.png" id="Image17" alt="" width="36" height="36"></a></div>
+</div>
+</div>
+<div id="Layer2" style="position:absolute;text-align:center;left:0px;top:1239px;width:100%;height:80px;z-index:50;">
+<div id="Layer2_Container" style="width:994px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="Html9" style="position:absolute;left:297px;top:30px;width:400px;height:20px;z-index:47">
+<div style="color: white; font-size: 18px; width: 100%; height: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
+    Created by - Akshay Jumde
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
